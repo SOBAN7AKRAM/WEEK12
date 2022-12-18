@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+main () {
+cout << "          A                   *                 *                                                       " << endl;
+cout << "         A A                    *             *                                                         " << endl;
+cout << "        A  AA                     *         *                                                           " << endl;
+cout << "       A    AA                      *     *                                                             " << endl;
+cout << "      A AAAA AA                       * *                                                               " << endl;
+cout << "     A        AA                      * *                                                               " << endl;
+cout << "    A          AA                   *     *                                                             " << endl;
+cout << "   A            AA                *         *                                                           " << endl;
+cout << "  A              AA             *             *                                                         " << endl;
+cout << "                              *                 *        U                 U                           " << endl;
+cout << "                                                         U                 U                            " << endl;
+cout << "   ZZZZZZZZZZZZZZZZZZZZ         KK         K             U                 U                           " << endl;
+cout << "                    ZZZ         KK       K               U                 U                           " << endl;
+cout << "                  ZZZ           KK     K                 U                 U                           " << endl;
+cout << "                ZZZ             KK   K                   U                 U                           " << endl;
+cout << "              ZZZ               KK K                     U                 U                            " << endl;
+cout << "            ZZZ                 KKK                      U                 U                            " << endl;
+cout << "          ZZZ                   KK KK                      U              U                             " << endl;
+cout << "        ZZZ                     KK   KK                      U U U U U U                                " << endl;
+cout << "      ZZZ                       KK     KK                                                               " << endl;
+cout << "    ZZZ                         KK       KK                                                             " << endl;
+cout << "   ZZZZZZZZZZZZZZZZZZZZ         KK         KK                                                           " << endl;
+cout << "                                                       SS S S S SS                                      " << endl;
+cout << "                                                     S             S                                    " << endl;
+cout << "                                                    S                S                                  " << endl;
+cout << "                                                   S                                                    " << endl;
+cout << "                                                   S                                                    " << endl;
+cout << "                                                    S                                                   " << endl;
+cout << "                                                      S                                                 " << endl;
+cout << "                                                        SS S S S SS                                     " << endl;
+cout << "                                                                    S                                   " << endl;
+cout << "                                                                     S                                  " << endl;
+cout << "                                                                      S                                 " << endl;
+cout << "                                                                      S                                 " << endl;
+cout << "                                                    S                S                                  " << endl;
+cout << "                                                      S             S                                   " << endl;
+cout << "                                                        SS S S S SS                                     " << endl;
+cout << "                                                                                                        " << endl;
+cout << "                                                                                                        " << endl;
+cout << "                                                                                                        " << endl;
+cout << "                                                                                                        " << endl;
+cout << "                                                                                                        " << endl;
+cout << "                                                                                                        " << endl;}
