@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
 main () {
-float charge;
-float time;
-float current;
-cout << " enter charge: ";
-cin >> charge;
-cout << " enter time:";
-cin >> time;
-current=charge/time;
-cout << "current is: " << current;
+int loose;
+int days;
+cout << "Enter weight you want to loose:";
+cin>>loose;
+days=loose*15;
+cout << " It will take you "<<days<<" days "<<"to loose "<<loose<<" kgs";
+
+
 
 }

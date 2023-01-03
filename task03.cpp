@@ -1,11 +1,20 @@
 #include <iostream>
 using namespace std;
 main () {
-float Kgs;
-float Pounds;
+float initialvelocity;
+float finalvelocity;
+float time;
+float acceleration;
+cout << " Enter Initial velocity= ";
+cin >> initialvelocity;
+cout << " Enter Acceleration= " ;
+cin >> acceleration;
+cout << "Enter Time= ";
+cin >> time;
+finalvelocity=acceleration*time+initialvelocity;
+cout << "Final Velocity= "<<finalvelocity;
 
-cout << " enter Kgs: ";
-cin >> Kgs;
-Pounds=Kgs*2.222;
-cout << " total Pounds=" << Pounds;
+
+
+
 }
