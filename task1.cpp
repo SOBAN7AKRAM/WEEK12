@@ -1,11 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
-main () {
-float oneDollar=226.58;
-int dollar;
-float rupees;
-cout << " enter dollar: ";
-cin >> dollar;
-rupees= oneDollar*dollar;
-cout << " Total rupees is: " << rupees ;
+void gotoxy(int x, int y);
+main () 
+{
+  system("cls");
+  cout <<"test";
+  gotoxy( 15, 15);
+  cout << "My name is M SOBAN AKRAM";
 }
+ void gotoxy(int x, int y)
+ {
+   COORD coordinates;
+   coordinates.X=x;
+   coordinates.Y=y;
+   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coordinates);
+ }
+   
+ 
