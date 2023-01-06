@@ -1,43 +1,22 @@
 #include <iostream>
-#include <windows.h>
 using namespace std;
-void maze();
-void gotoxy(int x,int y);
-void move(int x,int y);
-main ()
+bool symmetric(int num);
+main()
 { 
- system("cls");
- maze();
- int x=3;
- int y=3;
- move(x,y);
- 
+  int num;
+  bool isTrue;
+  cout <<"enter number";
+  cin>>num;
+  
+  isTrue=symmetric(num);
+  cout <<"ans is:"<<isTrue;
+
 }
-  void maze()
- {
-    cout << "****************************************" << endl;
-    cout << "*                                      *" << endl;
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl;
-    cout << "*                                      *" << endl; 
-    cout << "****************************************";
- }               
-   void gotoxy(int x, int y)
-   {
-     COORD coordinates;
-     coordinates.X=x;
-     coordinates.Y=y;
-     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coordinates);
-   }  
-   void move(int x,int y) 
-   {
-     gotoxy(x-1,y);
-     cout<< " ";
-     gotoxy(x,y);
-     cout << "P";
-     Sleep(200);
-   } 
+bool symmetric(int num)
+{
+  if (num%10==num/100)
+  {
+    return ;
+  }       
+    return 0;
+}

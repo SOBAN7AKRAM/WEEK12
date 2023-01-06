@@ -1,25 +1,51 @@
 #include <iostream>
 using namespace std;
-void num();
-main()
+int timeHours (int hours,int minutes);
+int timeMinutes (int hours,int minutes);
+main ()
 {
-  while(true){  
-  num();}
-}
- void num()
- {
-  int number1;
-  int number2;
-  cout << "Enter first number:";
-  cin >>number1;
-  cout <<"Enter second number:";
-  cin>>number2;
-  if (number1>=number2) 
+  system ("cls");
+  int hours;
+  int minutes;
+  int result;
+  int result1;
+  while (true){
+  cout <<"Enter hours:";
+  cin>>hours;
+  cout <<"Enter minutes:";
+  cin >>minutes;
+  result=timeHours(hours,minutes); 
+  if (result==24)
   {
-    cout <<number1<<endl;
+    result=0;
   }
-  if (number1<number2)
+  cout<<"hours is:"<<result<<endl;
+  result=timeMinutes(hours,minutes);
+  cout<<"minutes is:"<<result<<endl;}
+  
+  
+}
+int timeHours(int hours,int minutes)
+{
+  int minutesSum=minutes+15;
+  if (minutesSum>=60)
   {
-    cout <<number2<<endl;
+     hours=hours+1;
+     return hours;
   } 
- }
+  if (minutesSum<60) 
+  {
+     return hours;
+  }
+}
+int timeMinutes(int hours,int minutes)
+{
+  int final;
+  int minutesSum=minutes+15;
+  if (minutesSum>=60)
+  {
+    final=minutesSum-60;
+    return final; 
+  }
+    return minutesSum;
+}

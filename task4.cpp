@@ -1,55 +1,31 @@
 #include <iostream>
-#include <windows.h>
 using namespace std;
-void maze();
-void gotoxy(int x,int y);
-void move(int x,int y);
+int evenOdd(int num);
 main ()
-{ 
- system("cls");
- maze();
- int x=3;
- int y=3;
- while(true)
- {
-   move(x,y);
-   if (x<39)
-   {
-      x=x+1;
-   }
-   if (x==39)
-   {
-      gotoxy(x-1,y);
-      cout << " ";
-      x=3;
-   }
- }
+{
+  int num;
+  cout <<"Enter number:";
+  cin >>num;
+  evenOdd(num);
+  
+ 
+
 }
-  void maze()
- {
-    cout << "****************************************" << endl;
-    cout << "*                                      *" << endl;
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl;
-    cout << "*                                      *" << endl; 
-    cout << "****************************************";
- }               
-   void gotoxy(int x, int y)
-   {
-     COORD coordinates;
-     coordinates.X=x;
-     coordinates.Y=y;
-     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coordinates);
-   }  
-   void move(int x,int y) 
-   {
-     gotoxy(x-1,y);
-     cout<< " ";
-     gotoxy(x,y);
-     cout << "P";
-     Sleep(200);
-   } 
+int evenOdd(int num)
+{
+  int first=num%10;
+  int second=(num/10)%10;
+  int third=(num/100)%10;
+  int fourth=(num/1000)%10;
+  int fifth=(num/10000)%10;
+  int sum=first+second+third+fourth+fifth;
+  if (sum%2==1)
+  {
+    cout<<"oddish";
+  }
+  if (sum%2==0)
+  {
+    cout<<"evennish";
+  }
+
+}
