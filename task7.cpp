@@ -1,78 +1,29 @@
 #include <iostream>
-#include <windows.h>
+#include <cmath>
 using namespace std;
-void gotoxy(int x,int y);
-void maze();
-void movedown(int x,int y);
-void moveup(int x,int y);
 main ()
 {
-    system ("cls");
-    maze();
-    int x=10;
-    int y=2;
-    int direction=0;
-    while (true)
-    {
-       if (direction==0)
-       {
-        y=y+1;
-        movedown(x,y);
-       }
-       if(y==8)
-       {
-        direction=1;
-       }
-       
-       if(direction==1)
-       {        
-        y=y-1;
-        moveup (x,y);
-       }     
-       moveup(x,y);  
-       if(y==1)
-       
-       {
-        direction=0;
-       }
-
-
-    } 
-
+   int volume,flow1,flow2,flowvolume,volumeP;
+   float hours;
+   cout<<"Enter the total volumes of the pool in liters:";
+   cin>>volume;
+   cout<<"Enter the flow rate of pipe 1 per hour:";
+   cin>>flow1;
+   cout<< "Enter the flow rate of pipe 2 per hour:";
+   cin>>flow2;
+   cout<<"Enter the hours that the worker is absent:";
+   cin>>hours;
+   flowvolume=(flow1+flow2)*hours;
+   int overflow=flowvolume-volume;
+   volumeP=(flowvolume *100) / volume;
+   int percentage1=(flow1*100)/(flow1+flow2);
+   int percentage2=(flow2*100)/(flow1+flow2);
+   if (flowvolume<volume)
+   {
+      cout<<"The pool is "<<volumeP<<"% full."<<"Pipe 1: "<<percentage1<<"%."<<"Pipe 2: "<<percentage2<<"%."<<endl;
+   }
+   if (flowvolume>volume)
+   {
+     cout<<"For "<<hours<<" hours the pool overflows with "<<overflow<<" liters:"<<endl;
+   } 
 }
- void maze()
- {
-    cout << "****************************************" << endl;
-    cout << "*                                      *" << endl;
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl; 
-    cout << "*                                      *" << endl;
-    cout << "*                                      *" << endl; 
-    cout << "****************************************";
- }
- void gotoxy(int x,int y)
- {
-   COORD coordinates;
-   coordinates.X=x;
-   coordinates.Y=y;
-   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coordinates);
- }
- void movedown(int x,int y)
- {
-   gotoxy(x,y-1);
-   cout<<" ";
-   gotoxy(x,y);
-   cout<<"P";
-   Sleep (50);
- }
- void moveup(int x,int y)
- {
-   gotoxy(x,y+1);
-   cout<<" ";
-   gotoxy(x,y);
-   cout<<"P";
-   Sleep(50);
- }
